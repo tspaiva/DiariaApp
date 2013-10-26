@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FechamentoActivity" >
+
+    <ImageView
+        android:contentDescription="@string/descricaoo"
+        android:src="@drawable/foto"
+        android:id="@+id/fotoHospede" 
+        android:layout_width="83dp"
+        android:layout_height="86dp"
+        />
+    
+    
+    <TextView
+        android:id="@+id/fechamentoHospede"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="@string/hospede" 
+        android:layout_below="@id/fotoHospede"
+        />
+    
+    <TextView 
+        android:id="@+id/dbHospede"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Teste Hospede"
+        android:layout_below="@id/fechamentoHospede"
+       	/>
+    
+    <TextView 
+        android:id="@+id/aberturaData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="@string/data_de_entrada"
+        android:layout_below="@id/dbHospede"
+        />
+    
+    <TextView 
+        android:id="@+id/dbAberturaData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="23/05/2011"
+        android:layout_below="@id/aberturaData"
+        />
+    
+    <TextView 
+        android:id="@+id/fechamentoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Data de fechamento:"
+        android:layout_below="@id/dbAberturaData"
+        />
+    
+    <EditText 
+        android:id="@+id/dbFechamentoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/digite_data_para_fechamento"
+        android:layout_below="@id/fechamentoData"/>
+
+</RelativeLayout>

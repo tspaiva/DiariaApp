@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Diarias Marau</string>
+    <string name="title_activity_splash">Diárias Maraú</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">Hóspedes</string>
+    <string name="description">description</string>
+    <string name="title_activity_formulario">Novo Hóspede</string>
+    <string name="nome_">Nome:</string>
+    <string name="digite_o_nome_aqui">Digite o nome aqui</string>
+    <string name="n_pessoas_">Nº Pessoas:</string>
+    <string name="quantidade_de_pessoas_aqui">Quantidade de pessoas aqui</string>
+    <string name="dia_">Dia:</string>
+    <string name="dia_de_entrada">Dia de entrada</string>
+    <string name="m_s_">Mês:</string>
+    <string name="mes_">Mês:</string>
+    <string name="mes_de_entrada">Mês de entrada</string>
+    <string name="ano_">Ano:</string>
+    <string name="ano_de_entrada">Ano de entrada</string>
+    <string name="newHospede">Novo Hospede</string>
+    <string name="saveHospede">Salvar</string>
+    <string name="camera">Foto</string>
+    <string name="title_activity_fechamento">Fechamento</string>
+    <string name="numero_do_quarto"> Nº Quarto</string>
+    <string name="digite_n_quarto">Digite Nº Quarto</string>
+    <string name="valor_diaria">Valor Diária</string>
+    <string name="digite_valor">Digite Valor</string>
+    <string name="hospede">Hóspede:</string>
+    <string name="descricaoo">Descrição</string>
+    <string name="data_de_entrada">Data de Entrada:</string>
+    <string name="digite_data_para_fechamento">Digite data para fechamento</string>
+
+</resources>
