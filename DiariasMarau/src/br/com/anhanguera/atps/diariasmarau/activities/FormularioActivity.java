@@ -5,6 +5,7 @@ import br.com.anhanguera.atps.diariasmarau.dao.DiariaDAO;
 import br.com.anhanguera.atps.diariasmarau.model.Diaria;
 import android.os.Bundle;
 import android.app.Activity;
+import android.graphics.Camera;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -21,16 +22,6 @@ public class FormularioActivity extends Activity {
 	
 	private Diaria diaria = new Diaria();
 	
-	
-	private void buscaComponentes(){
-		this.nome = (EditText) findViewById(R.id.nome);
-		this.numQuarto = (EditText) findViewById(R.id.numQuarto);
-		this.numPessoas = (EditText) findViewById(R.id.numPessoas);
-		this.dia = (EditText) findViewById(R.id.dia);
-		this.mes = (EditText) findViewById(R.id.mes);
-		this.ano = (EditText) findViewById(R.id.ano);
-		this.valor = (EditText) findViewById(R.id.valor);
-	}
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -58,11 +49,24 @@ public class FormularioActivity extends Activity {
 			
 				finish();
 			break;
+			case R.id.fotoHospede:
+				
+				
 
 			default:
 			break;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	private void buscaComponentes(){
+		this.nome = (EditText) findViewById(R.id.nome);
+		this.numQuarto = (EditText) findViewById(R.id.numQuarto);
+		this.numPessoas = (EditText) findViewById(R.id.numPessoas);
+		this.dia = (EditText) findViewById(R.id.dia);
+		this.mes = (EditText) findViewById(R.id.mes);
+		this.ano = (EditText) findViewById(R.id.ano);
+		this.valor = (EditText) findViewById(R.id.valor);
 	}
 	
 	private void insereDiariaComDadosDaTela(){

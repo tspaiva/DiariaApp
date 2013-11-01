@@ -16,7 +16,7 @@ public class DiariaDAO extends SQLiteOpenHelper{
 	private static final int VERSAO = 1; //versão da tabela para marcar que foi alterado algum detalhe do modelo
 	private static final String TABELA = "diarias";
 	private static final String DATABASE = "marau.db";
-	private static final String[] COLUNAS = {"id", "nome", "numeroQuarto", "n_pessoas", "dia", "mes", "ano", "valor"};
+	private static final String[] COLUNAS = {"id", "nome", "numeroQuarto", "numeroPessoas", "dia", "mes", "ano", "valor"};
 	
 	public DiariaDAO(Context context){
 		super(context, DATABASE, null, VERSAO);
@@ -25,8 +25,8 @@ public class DiariaDAO extends SQLiteOpenHelper{
 	
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		String ddl = "CREATE TABLE " + TABELA + " (id INTEGER PRIMARY KEY AUTOINCREMENT," +
-				" nome TEXT NOT NULL, numeroQuarto TEXT NOT NULL, n_pessoas TEXT NOT NULL, dia TEXT NOT NULL, " +
+		String ddl = "CREATE TABLE " + TABELA + " (id INTEGER PRIMARY KEY, " +
+				" nome TEXT NOT NULL, numeroQuarto TEXT NOT NULL, numeroPessoas TEXT NOT NULL, dia TEXT NOT NULL, " +
 				" mes TEXT NOT NULL, ano TEXT NOT NULL, valor TEXT NOT NULL);";
 			db.execSQL(ddl);
 	}
@@ -44,7 +44,7 @@ public class DiariaDAO extends SQLiteOpenHelper{
 		Cursor c = getWritableDatabase().query(TABELA, COLUNAS, null, null, null, null, null);
 		
 		c.moveToFirst();
-		while (c.isAfterLast()){
+		while (c.moveToNext()){
 			Diaria diaria = new Diaria();
 			diaria.setId(c.getLong(0));
 			diaria.setNomeLocatario(c.getString(1));
@@ -67,10 +67,11 @@ public class DiariaDAO extends SQLiteOpenHelper{
 		
 		values.put("nome", diaria.getNomeLocatario());
 		values.put("numeroQuarto", diaria.getNumeroQuarto());
-		values.put("n_pessoas", diaria.getNumeroPessoas());
+		values.put("numeroPessoas", diaria.getNumeroPessoas());
 		values.put("dia", diaria.getDia());
 		values.put("mes", diaria.getMes());
 		values.put("ano", diaria.getAno());
 		values.put("valor", diaria.getValorDiaria());
+		getWritableDatabase().insert(TABELA, null, values);
 	}
 }

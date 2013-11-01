@@ -10,6 +10,10 @@ public class Diaria {
 	private String mes;
 	private String ano;
 	
+	public String toString(){
+		return id + " - " + nomeLocatario;
+		
+	}
 	
 	public Long getId() {
 		return id;

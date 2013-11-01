@@ -26,11 +26,15 @@ private List<Diaria> diarias;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_lista_hospedes);
 		
-		String[]hospedes = {"José", "João", "Renan", "Anderson", "Jonathan", "Thiago"};
+		listaHospedes = (ListView) findViewById(R.id.listaHospedes);
+		carregaLista();
+		
+		
+/*		String[]hospedes = {"José", "João", "Renan", "Anderson", "Jonathan", "Thiago"};
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, hospedes);
 		listaHospedes = (ListView) findViewById(R.id.listaHospedes);
 		listaHospedes.setAdapter(adapter);
-//		carregaLista();
+//		carregaLista();*/
 		
 		listaHospedes.setOnItemClickListener(new OnItemClickListener() {
 			@Override
@@ -42,6 +46,11 @@ private List<Diaria> diarias;
 		});
 	}
 	
+	@Override
+		protected void onResume() {
+			super.onResume();
+			carregaLista();
+		}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,6 +86,15 @@ private List<Diaria> diarias;
 			}
 			return super.onOptionsItemSelected(item);
 		}
+	
+	private void carregaLista(){
+		DiariaDAO dao = new DiariaDAO(this);
+		diarias = dao.getList();
+		dao.close();
+		
+		ArrayAdapter<Diaria> adapter = new ArrayAdapter<Diaria>(this, android.R.layout.simple_list_item_1, diarias);
+		listaHospedes.setAdapter(adapter);
+	}
 	
 
 }
