@@ -74,4 +74,9 @@ public class DiariaDAO extends SQLiteOpenHelper{
 		values.put("valor", diaria.getValorDiaria());
 		getWritableDatabase().insert(TABELA, null, values);
 	}
+	
+	public void delete(Diaria diaria){
+		getWritableDatabase().delete(TABELA, "id=?", 
+				new String[] { diaria.getId().toString()} );
+	}
 }
