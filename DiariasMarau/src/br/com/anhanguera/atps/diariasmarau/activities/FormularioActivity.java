@@ -1,8 +1,8 @@
 package br.com.anhanguera.atps.diariasmarau.activities;
 
 import br.com.anhanguera.atps.diariasmarau.R;
-import br.com.anhanguera.atps.diariasmarau.dao.DiariaDAO;
-import br.com.anhanguera.atps.diariasmarau.model.Diaria;
+import br.com.anhanguera.atps.diariasmarau.dao.PousadaDAO;
+import br.com.anhanguera.atps.diariasmarau.model.Hospedagem;
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Camera;
@@ -10,7 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-
+//TODO Arrumar Campos do formulário
 public class FormularioActivity extends Activity {
 	private EditText nome; 
 	private EditText numQuarto; 
@@ -20,7 +20,7 @@ public class FormularioActivity extends Activity {
 	private EditText ano;
 	private EditText valor;
 	
-	private Diaria diaria = new Diaria();
+	private Hospedagem hospedagem = new Hospedagem();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +41,10 @@ public class FormularioActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch (item.getItemId()){
 			case R.id.saveHospede:
-				insereDiariaComDadosDaTela();
+				insereHospedagemComDadosDaTela();
 				
-				DiariaDAO dao = new DiariaDAO(FormularioActivity.this);
-				dao.insert(diaria);
+				PousadaDAO dao = new PousadaDAO(FormularioActivity.this);
+				dao.insereHospedagem(hospedagem);
 				dao.close();
 			
 				finish();
@@ -58,7 +58,7 @@ public class FormularioActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
+	//TODO Arrumar campos no XML e no código
 	private void buscaComponentes(){
 		this.nome = (EditText) findViewById(R.id.nome);
 		this.numQuarto = (EditText) findViewById(R.id.numQuarto);
@@ -69,14 +69,12 @@ public class FormularioActivity extends Activity {
 		this.valor = (EditText) findViewById(R.id.valor);
 	}
 	
-	private void insereDiariaComDadosDaTela(){
-		this.diaria.setNomeLocatario(this.nome.getEditableText().toString());
-		this.diaria.setNumeroQuarto(this.numQuarto.getEditableText().toString());
-		this.diaria.setNumeroPessoas(this.numPessoas.getEditableText().toString());
-		this.diaria.setDia(this.dia.getEditableText().toString());
-		this.diaria.setMes(this.mes.getEditableText().toString());
-		this.diaria.setAno(this.ano.getEditableText().toString());
-		this.diaria.setValorDiaria(this.valor.getEditableText().toString());
+	private void insereHospedagemComDadosDaTela(){
+		this.hospedagem.setNumeroQuarto(this.nome.getEditableText().toString());
+		this.hospedagem.setNumeroHospede(this.numQuarto.getEditableText().toString());
+		this.hospedagem.setDataEntrada(this.numPessoas.getEditableText().toString());
+		this.hospedagem.setDataSaida(this.numPessoas.getEditableText().toString());
+		this.hospedagem.setValorTotal(this.valor.getEditableText().toString());
 	}
 	
 	

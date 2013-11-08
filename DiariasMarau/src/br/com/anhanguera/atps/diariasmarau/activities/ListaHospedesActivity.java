@@ -3,8 +3,8 @@ package br.com.anhanguera.atps.diariasmarau.activities;
 import java.util.List;
 
 import br.com.anhanguera.atps.diariasmarau.R;
-import br.com.anhanguera.atps.diariasmarau.dao.DiariaDAO;
-import br.com.anhanguera.atps.diariasmarau.model.Diaria;
+import br.com.anhanguera.atps.diariasmarau.dao.PousadaDAO;
+import br.com.anhanguera.atps.diariasmarau.model.Hospedagem;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -19,7 +19,7 @@ import android.widget.ListView;
 
 public class ListaHospedesActivity extends Activity {
 private ListView listaHospedes;
-private List<Diaria> diarias;
+private List<Hospedagem> diarias;
 	
 @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -88,11 +88,11 @@ private List<Diaria> diarias;
 		}
 	
 	private void carregaLista(){
-		DiariaDAO dao = new DiariaDAO(this);
+		PousadaDAO dao = new PousadaDAO(this);
 		diarias = dao.getList();
 		dao.close();
 		
-		ArrayAdapter<Diaria> adapter = new ArrayAdapter<Diaria>(this, android.R.layout.simple_list_item_1, diarias);
+		ArrayAdapter<Hospedagem> adapter = new ArrayAdapter<Hospedagem>(this, android.R.layout.simple_list_item_1, diarias);
 		listaHospedes.setAdapter(adapter);
 	}
 	
