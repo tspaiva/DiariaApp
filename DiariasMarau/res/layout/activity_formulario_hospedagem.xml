@@ -1,0 +1,61 @@
+
+    
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" 
+    tools:context=".FormularioHospedagemActivity" >
+
+	<TextView 
+	    android:id="@+id/labelNumHospede"
+	    android:text="@string/numero_hospede"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="15sp"
+	/>
+	
+	<Spinner
+	    android:id="@+id/numHospede"
+	    android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_below="@id/labelNumHospede"
+		    
+	/>
+	
+	<TextView 
+	    android:id="@+id/labelQuarto" 
+	    android:text="@string/numero_do_quarto"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="15sp"
+	    android:layout_below="@id/numHospede"
+	    />
+	
+	<Spinner
+	    android:id="@+id/numQuarto"
+	    android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_below="@id/labelQuarto"
+	/>
+	
+	
+	<TextView
+	    android:id="@+id/labelDataEntrada"
+	    android:text="@string/data_de_entrada"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="15sp"
+	    android:layout_below="@id/numQuarto" 
+	/>
+	
+	<EditText
+	    android:id="@+id/dataEntrada"
+	    android:hint="@string/digite_data_de_entrada"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/labelDataEntrada"
+	/>
+</RelativeLayout>

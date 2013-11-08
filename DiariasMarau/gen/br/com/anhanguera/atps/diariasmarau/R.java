@@ -30,36 +30,28 @@ public final class R {
     }
     public static final class id {
         public static final int aberturaData=0x7f080003;
-        public static final int action_settings=0x7f080017;
-        public static final int ano=0x7f080012;
+        public static final int action_settings=0x7f08000f;
+        public static final int dataEntrada=0x7f08000c;
         public static final int dbAberturaData=0x7f080004;
         public static final int dbFechamentoData=0x7f080006;
         public static final int dbHospede=0x7f080002;
-        public static final int dia=0x7f08000e;
         public static final int fechamentoData=0x7f080005;
         public static final int fechamentoHospede=0x7f080001;
         public static final int fotoHospede=0x7f080000;
-        public static final int labelAno=0x7f080011;
-        public static final int labelDia=0x7f08000d;
-        public static final int labelMes=0x7f08000f;
-        public static final int labelNome=0x7f080007;
-        public static final int labelPessoas=0x7f08000b;
+        public static final int labelDataEntrada=0x7f08000b;
+        public static final int labelNumHospede=0x7f080007;
         public static final int labelQuarto=0x7f080009;
-        public static final int labelValor=0x7f080013;
-        public static final int listaHospedes=0x7f080015;
-        public static final int mes=0x7f080010;
-        public static final int nome=0x7f080008;
-        public static final int novo_hospede=0x7f080019;
-        public static final int numPessoas=0x7f08000c;
+        public static final int listaHospedagens=0x7f08000d;
+        public static final int novo_hospede=0x7f080011;
+        public static final int numHospede=0x7f080008;
         public static final int numQuarto=0x7f08000a;
-        public static final int saveHospede=0x7f080018;
-        public static final int splash_image=0x7f080016;
-        public static final int valor=0x7f080014;
+        public static final int saveHospede=0x7f080010;
+        public static final int splash_image=0x7f08000e;
     }
     public static final class layout {
         public static final int activity_fechamento=0x7f030000;
-        public static final int activity_formulario=0x7f030001;
-        public static final int activity_lista_hospedes=0x7f030002;
+        public static final int activity_formulario_hospedagem=0x7f030001;
+        public static final int activity_lista_hospedagens=0x7f030002;
         public static final int activity_splash=0x7f030003;
     }
     public static final class menu {
@@ -79,6 +71,7 @@ public final class R {
         public static final int description=0x7f050005;
         public static final int dia_=0x7f05000b;
         public static final int dia_de_entrada=0x7f05000c;
+        public static final int digite_data_de_entrada=0x7f05001f;
         public static final int digite_data_para_fechamento=0x7f05001d;
         public static final int digite_n_quarto=0x7f050017;
         public static final int digite_o_nome_aqui=0x7f050008;
@@ -92,6 +85,7 @@ public final class R {
         public static final int newHospede=0x7f050012;
         public static final int nome_=0x7f050007;
         public static final int numero_do_quarto=0x7f050016;
+        public static final int numero_hospede=0x7f05001e;
         public static final int quantidade_de_pessoas_aqui=0x7f05000a;
         public static final int saveHospede=0x7f050013;
         public static final int title_activity_fechamento=0x7f050015;

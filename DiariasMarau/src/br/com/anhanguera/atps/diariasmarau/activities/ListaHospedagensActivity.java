@@ -17,30 +17,23 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-public class ListaHospedesActivity extends Activity {
-private ListView listaHospedes;
-private List<Hospedagem> diarias;
+public class ListaHospedagensActivity extends Activity {
+private ListView listaHospedagens;
+private List<Hospedagem> hospedagens;
 	
 @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_lista_hospedes);
+		setContentView(R.layout.activity_lista_hospedagens);
 		
-		listaHospedes = (ListView) findViewById(R.id.listaHospedes);
+		listaHospedagens = (ListView) findViewById(R.id.listaHospedagens);
 		carregaLista();
 		
-		
-/*		String[]hospedes = {"José", "João", "Renan", "Anderson", "Jonathan", "Thiago"};
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, hospedes);
-		listaHospedes = (ListView) findViewById(R.id.listaHospedes);
-		listaHospedes.setAdapter(adapter);
-//		carregaLista();*/
-		
-		listaHospedes.setOnItemClickListener(new OnItemClickListener() {
+		listaHospedagens.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> adapter, View view, int posicao,
 					long id) {
-				Intent intent = new Intent(ListaHospedesActivity.this, FechamentoActivity.class);
+				Intent intent = new Intent(ListaHospedagensActivity.this, FechamentoActivity.class);
 				startActivity(intent);
 			}
 		});
@@ -60,11 +53,11 @@ private List<Hospedagem> diarias;
 	}
 	/*private void carregaLista(){
 		DiariaDAO dao = new DiariaDAO(this);
-		diarias = dao.getList();
+		hospedagens = dao.getList();
 		dao.close();
 		
-		ArrayAdapter<Diaria> adapter = new ArrayAdapter<Diaria>(this, android.R.layout.simple_list_item_1, diarias);
-		listaHospedes.setAdapter(adapter);
+		ArrayAdapter<Diaria> adapter = new ArrayAdapter<Diaria>(this, android.R.layout.simple_list_item_1, hospedagens);
+		listaHospedagens.setAdapter(adapter);
 	}
 	@Override
 		protected void onResume() {
@@ -77,7 +70,7 @@ private List<Hospedagem> diarias;
 		public boolean onOptionsItemSelected(MenuItem item) {
 			switch (item.getItemId()){
 				case R.id.novo_hospede:
-					Intent intent = new Intent(this, FormularioActivity.class);
+					Intent intent = new Intent(this, FormularioHospedagemActivity.class);
 					startActivity(intent);
 					break;
 
@@ -89,11 +82,11 @@ private List<Hospedagem> diarias;
 	
 	private void carregaLista(){
 		PousadaDAO dao = new PousadaDAO(this);
-		diarias = dao.getList();
+		hospedagens = dao.getList();
 		dao.close();
 		
-		ArrayAdapter<Hospedagem> adapter = new ArrayAdapter<Hospedagem>(this, android.R.layout.simple_list_item_1, diarias);
-		listaHospedes.setAdapter(adapter);
+		ArrayAdapter<Hospedagem> adapter = new ArrayAdapter<Hospedagem>(this, android.R.layout.simple_list_item_1, hospedagens);
+		listaHospedagens.setAdapter(adapter);
 	}
 	
 

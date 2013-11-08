@@ -29,7 +29,9 @@
     <string name="digite_valor">Digite Valor</string>
     <string name="hospede">Hóspede:</string>
     <string name="descricaoo">Descrição</string>
-    <string name="data_de_entrada">Data de Entrada:</string>
+    <string name="data_de_entrada">Data de Entrada</string>
     <string name="digite_data_para_fechamento">Digite data para fechamento</string>
+    <string name="numero_hospede">Numero hospede</string>
+    <string name="digite_data_de_entrada">Digite data de entrada</string>
 
 </resources>

@@ -14,7 +14,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class PousadaDAO extends SQLiteOpenHelper{
 
 	private static final String DATABASE = "marau.db";
-	private static final int VERSAO = 1; //versão da tabela para marcar que foi alterado algum detalhe do modelo
+	private static final int VERSAO = 3; //versão da tabela para marcar que foi alterado algum detalhe do modelo
 	private Banco banco;
 
 	

@@ -30,7 +30,7 @@ public class SplashScreenActivity extends Activity implements Runnable{
 
 	@Override
 	public void run() {
-		startActivity(new Intent(this, ListaHospedesActivity.class));
+		startActivity(new Intent(this, ListaHospedagensActivity.class));
 		finish();
 		
 	}
