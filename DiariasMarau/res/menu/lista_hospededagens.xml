@@ -1,20 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <item
-        android:id="@+id/nova_hospedagem"
-        android:icon="@drawable/contentnew"
-        android:showAsAction="ifRoom|withText"
-        android:title="@string/add_hospedagem"/>
-
-    <item 
-        android:id="@+id/tela_hospedes"
-        android:icon="@drawable/person"
-        android:showAsAction="ifRoom|withText"
-        android:title="@string/hospedes"/>
-    
     <item 
         android:id="@+id/tela_quartos"
         android:icon="@drawable/quarto"
-        android:showAsAction="ifRoom|withText"
+        android:showAsAction="always"
         android:title="@string/quartos"/>
+    
+    <item 
+        android:id="@+id/tela_hospedes"
+        android:icon="@drawable/person"
+        android:showAsAction="always"
+        android:title="@string/hospedes"/>
+    
+     <item
+        android:id="@+id/nova_hospedagem"
+        android:icon="@drawable/contentnew"
+        android:showAsAction="always"
+        android:title="@string/add_hospedagem"/>
 </menu>

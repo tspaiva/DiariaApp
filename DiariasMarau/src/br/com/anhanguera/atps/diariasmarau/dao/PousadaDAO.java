@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.anhanguera.atps.diariasmarau.model.Hospedagem;
+import br.com.anhanguera.atps.diariasmarau.model.Hospede;
+import br.com.anhanguera.atps.diariasmarau.model.Quarto;
 import br.com.anhanguera.atps.diariasmarau.strings.Banco;
 import android.content.ContentValues;
 import android.content.Context;
@@ -18,7 +20,7 @@ public class PousadaDAO extends SQLiteOpenHelper{
 	private static final int VERSAO = 4; //versão da tabela para marcar que foi alterado algum detalhe do modelo
 	private Banco banco = new Banco();
 	
-	private static final String TAG = "PousadaDAO";
+	//private static final String TAG = "PousadaDAO";
 
 	
 	public PousadaDAO(Context context){
@@ -45,14 +47,10 @@ public class PousadaDAO extends SQLiteOpenHelper{
 		onCreate(db);
 	}
 	
-	public List<Hospedagem> getList(){
-		//TODO Verificar outras tabelas
+	public List<Hospedagem> getListaHospedagens(){
 		List<Hospedagem> hospedagens = new ArrayList<Hospedagem>();
-		Log.d(TAG, "Teste Banco1");
 		Cursor c = getWritableDatabase().query(banco.getTABELA_HOSPEDAGEM(), banco.getCOLUNAS_HOSPEDAGEM(), null, null, null, null, null);
-		Log.d(TAG, "Teste Banco2");
 		c.moveToFirst();
-		Log.d(TAG, "Teste Banco3");
 		while (c.moveToNext()){
 			Hospedagem hospedagem = new Hospedagem();
 			hospedagem.setId(c.getLong(0));
@@ -68,14 +66,49 @@ public class PousadaDAO extends SQLiteOpenHelper{
 		return hospedagens;
 	}
 	
+	public List<Hospede> getListaHospedes(){
+		List<Hospede> hospedes = new ArrayList<Hospede>();
+		Cursor c = getWritableDatabase().query(banco.getTABELA_HOSPEDE(), banco.getCOLUNAS_HOSPEDE(), null, null, null, null, null);
+		c.moveToFirst();
+		while (c.moveToNext()){
+			Hospede hospede = new Hospede();
+			hospede.setId(c.getLong(0));
+			hospede.setNome(c.getString(1));
+			hospede.setEndereco(c.getString(2));
+			hospede.setTelefone(c.getString(3));
+						
+			hospedes.add(hospede);
+		}
+		
+		c.close();
+		return hospedes;
+	}
+
 	public void insereHospedagem(Hospedagem hospedagem){
 		ContentValues values = new ContentValues();
 		
-		values.put("nome", hospedagem.getNumeroQuarto());
-		values.put("numeroQuarto", hospedagem.getNumeroHospede());
-		values.put("numeroPessoas", hospedagem.getDataEntrada());
-		values.put("dia", hospedagem.getDataSaida());
-		values.put("valor", hospedagem.getValorTotal());
+		values.put("id_quarto", hospedagem.getNumeroQuarto());
+		values.put("id_hospede", hospedagem.getNumeroHospede());
+		values.put("data_entrada", hospedagem.getDataEntrada());
+		values.put("data_saida", hospedagem.getDataSaida());
 		getWritableDatabase().insert(banco.getTABELA_HOSPEDAGEM(), null, values);
+	}
+	
+	public void insereHospede(Hospede hospede){
+		ContentValues values = new ContentValues();
+		
+		values.put("nome", hospede.getNome());
+		values.put("endereco", hospede.getEndereco());
+		values.put("telefone", hospede.getTelefone());
+		getWritableDatabase().insert(banco.getTABELA_HOSPEDE(), null, values);
+	}
+	
+	public void insereQuarto(Quarto quarto){
+		ContentValues values = new ContentValues();
+		
+		values.put("descricao", quarto.getDescricao());
+		values.put("valor", quarto.getValor());
+		getWritableDatabase().insert(banco.getTABELA_QUARTO(), null, values);
+		
 	}
 }

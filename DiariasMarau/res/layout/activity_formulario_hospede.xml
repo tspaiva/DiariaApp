@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FormularioHospedeActivity" >
+
+    <TextView 
+        android:id="@+id/labelNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nome"
+    />
+    
+    <EditText 
+        android:id="@+id/nomeHospede"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/digite_o_nome"
+        android:layout_below="@id/labelNome"
+    />
+    
+    <TextView 
+        android:id="@+id/labelEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/endereco"
+        android:layout_below="@id/nomeHospede"
+        />
+    
+    <EditText 
+        android:id="@+id/endHospede"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/digite_o_endereco"
+        android:layout_below="@id/labelEndereco"/>
+    
+    <TextView 
+        android:id="@+id/labelTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/telefone"
+        android:layout_below="@id/endHospede"
+        />
+    
+    <EditText 
+        android:id="@+id/telHospede"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/digite_o_telefone"
+        android:layout_below="@id/labelTelefone"
+        android:inputType="phone"/>
+    
+    
+</RelativeLayout>

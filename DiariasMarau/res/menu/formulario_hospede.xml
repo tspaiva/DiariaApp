@@ -1,9 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/novo_hospede"
-       android:icon="@drawable/contentnew"
+        android:id="@+id/saveHospede"
+        android:icon="@drawable/contentsave"
         android:showAsAction="always"
-        android:title="@string/add_hospede"/>
+        android:title="@string/salvar"/>
 
 </menu>

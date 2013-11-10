@@ -2,19 +2,15 @@
 <resources>
 
     <string name="app_name">Diarias Marau</string>
-    <string name="title_activity_splash">Diárias Maraú</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_main">Hóspedes</string>
     <string name="description">description</string>
-    <string name="title_activity_formulario">Novo Hóspede</string>
     <string name="nome_">Nome:</string>
     <string name="digite_o_nome_aqui">Digite o nome aqui</string>
     <string name="n_pessoas_">Nº Pessoas:</string>
     <string name="hospedes">Hóspedes</string>
-    <string name="saveHospede">Salvar</string>
+    <string name="salvar">Salvar</string>
     <string name="camera">Foto</string>
-    <string name="title_activity_fechamento">Fechamento</string>
     <string name="numero_do_quarto"> Nº Quarto</string>
     <string name="digite_n_quarto">Digite Nº Quarto</string>
     <string name="valor_diaria">Valor Diária</string>
@@ -25,12 +21,25 @@
     <string name="digite_data_para_fechamento">Digite data para fechamento</string>
     <string name="numero_hospede">Numero hospede</string>
     <string name="digite_data_de_entrada">Digite data de entrada</string>
-    <string name="title_activity_lista_quarto">Quartos</string>
     <string name="descricao">Descrição:</string>
-    <string name="title_activity_formulario_quarto">Cadastrar Quarto</string>
     <string name="descricao_do_quarto">Descrição do quarto</string>
     <string name="add_hospedagem">Cadastrar Hospedagem</string>
     <string name="quartos">Quartos</string>
-    <string name="title_activity_lista_hospede">ListaHospedeActivity</string>
+    <string name="title_activity_lista_hospede">Hóspedes</string>
+    <string name="title_activity_formulario_quarto">Cadastrar Quarto</string>
+    <string name="title_activity_splash">Diárias Maraú</string>
+    <string name="title_activity_lista_quarto">Quartos</string>
+    <string name="title_activity_fechamento">Fechamento</string>
+    <string name="title_activity_main">Hospedagens</string>
+    <string name="title_activity_formulario">Nova Hospedagem</string>
+    <string name="title_activity_formulario_hospede">FormularioHospedeActivity</string>
+    <string name="nome">Nome:</string>
+    <string name="digite_o_nome">Digite o nome</string>
+    <string name="endereco">Endereço:</string>
+    <string name="digite_o_endereco">Digite o endereço</string>
+    <string name="digite_o_telefone">Digite o telefone</string>
+    <string name="telefone">Telefone:</string>
+    <string name="add_hospede">Adicionar Hóspede</string>
 
 </resources>
+

@@ -55,19 +55,19 @@ private List<Hospedagem> hospedagens;
 	@Override
 		public boolean onOptionsItemSelected(MenuItem item) {
 			switch (item.getItemId()){
-				case R.id.nova_hospedagem:
-					Intent intentAddHospedagem = new Intent(this, FormularioHospedagemActivity.class);
-					startActivity(intentAddHospedagem);
+				case R.id.tela_quartos:
+					Intent intentTelaQuarto = new Intent(this, ListaQuartoActivity.class);
+					startActivity(intentTelaQuarto);
 					break;
-					
+				
 				case R.id.tela_hospedes:
 					Intent intentTelaHospede = new Intent(this, ListaHospedeActivity.class);
 					startActivity(intentTelaHospede);
 					break;
 				
-				case R.id.tela_quartos:
-					Intent intentTelaQuarto = new Intent(this, ListaQuartoActivity.class);
-					startActivity(intentTelaQuarto);
+				case R.id.nova_hospedagem:
+					Intent intentAddHospedagem = new Intent(this, FormularioHospedagemActivity.class);
+					startActivity(intentAddHospedagem);
 					break;
 					
 				default:
@@ -78,7 +78,7 @@ private List<Hospedagem> hospedagens;
 	
 	private void carregaLista(){
 		PousadaDAO dao = new PousadaDAO(this);
-		hospedagens = dao.getList();
+		hospedagens = dao.getListaHospedagens();
 		dao.close();
 		
 		ArrayAdapter<Hospedagem> adapter = new ArrayAdapter<Hospedagem>(this, android.R.layout.simple_list_item_1, hospedagens);
