@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FormularioQuartoActivity" >
+
+   <TextView
+       android:id="@+id/labelDescricao"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/descricao" 
+    />
+    
+    <EditText
+        android:id="@+id/descricaoQuarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/descricao_do_quarto"
+        android:layout_below="@id/labelDescricao" 
+    />
+    
+    <TextView
+        android:id="@+id/labelValorQuarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_diaria"
+        android:layout_below="@id/descricaoQuarto"/>
+    
+    <EditText 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/digite_valor"
+        android:layout_below="@id/labelValorQuarto"
+    />
+  
+        
+</RelativeLayout>

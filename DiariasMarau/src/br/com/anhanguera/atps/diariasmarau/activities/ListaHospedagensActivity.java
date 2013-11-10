@@ -48,32 +48,28 @@ private List<Hospedagem> hospedagens;
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.lista_hospedes, menu);
+		getMenuInflater().inflate(R.menu.lista_hospededagens, menu);
 		return true;
 	}
-	/*private void carregaLista(){
-		DiariaDAO dao = new DiariaDAO(this);
-		hospedagens = dao.getList();
-		dao.close();
-		
-		ArrayAdapter<Diaria> adapter = new ArrayAdapter<Diaria>(this, android.R.layout.simple_list_item_1, hospedagens);
-		listaHospedagens.setAdapter(adapter);
-	}
-	@Override
-		protected void onResume() {
-			super.onResume();
-			//carregaLista();
-		}*/
-	
 	
 	@Override
 		public boolean onOptionsItemSelected(MenuItem item) {
 			switch (item.getItemId()){
-				case R.id.novo_hospede:
-					Intent intent = new Intent(this, FormularioHospedagemActivity.class);
-					startActivity(intent);
+				case R.id.nova_hospedagem:
+					Intent intentAddHospedagem = new Intent(this, FormularioHospedagemActivity.class);
+					startActivity(intentAddHospedagem);
 					break;
-
+					
+				case R.id.tela_hospedes:
+					Intent intentTelaHospede = new Intent(this, ListaHospedeActivity.class);
+					startActivity(intentTelaHospede);
+					break;
+				
+				case R.id.tela_quartos:
+					Intent intentTelaQuarto = new Intent(this, ListaQuartoActivity.class);
+					startActivity(intentTelaQuarto);
+					break;
+					
 				default:
 					break;
 			}

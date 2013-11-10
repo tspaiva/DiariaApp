@@ -8,11 +8,14 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="16" />
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.hardware.camera"/>
-    <uses-permission android:name ="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    
-    <uses-feature android:name ="android.hardware.camera" android:required ="false"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -29,7 +32,7 @@
         </activity>
         <activity
             android:name="br.com.anhanguera.atps.diariasmarau.activities.ListaHospedagensActivity"
-            android:label="@string/title_activity_main">
+            android:label="@string/title_activity_main" >
         </activity>
         <activity
             android:name="br.com.anhanguera.atps.diariasmarau.activities.FormularioHospedagemActivity"
@@ -38,6 +41,18 @@
         <activity
             android:name="br.com.anhanguera.atps.diariasmarau.activities.FechamentoActivity"
             android:label="@string/title_activity_fechamento" >
+        </activity>
+        <activity
+            android:name="br.com.anhanguera.atps.diariasmarau.activities.ListaQuartoActivity"
+            android:label="@string/title_activity_lista_quarto" >
+        </activity>
+        <activity
+            android:name="br.com.anhanguera.atps.diariasmarau.activities.FormularioQuartoActivity"
+            android:label="@string/title_activity_formulario_quarto" >
+        </activity>
+        <activity
+            android:name="br.com.anhanguera.atps.diariasmarau.activities.ListaHospedeActivity"
+            android:label="@string/title_activity_lista_hospede" >
         </activity>
     </application>
 

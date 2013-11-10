@@ -11,15 +11,7 @@
     <string name="nome_">Nome:</string>
     <string name="digite_o_nome_aqui">Digite o nome aqui</string>
     <string name="n_pessoas_">Nº Pessoas:</string>
-    <string name="quantidade_de_pessoas_aqui">Quantidade de pessoas aqui</string>
-    <string name="dia_">Dia:</string>
-    <string name="dia_de_entrada">Dia de entrada</string>
-    <string name="m_s_">Mês:</string>
-    <string name="mes_">Mês:</string>
-    <string name="mes_de_entrada">Mês de entrada</string>
-    <string name="ano_">Ano:</string>
-    <string name="ano_de_entrada">Ano de entrada</string>
-    <string name="newHospede">Novo Hospede</string>
+    <string name="hospedes">Hóspedes</string>
     <string name="saveHospede">Salvar</string>
     <string name="camera">Foto</string>
     <string name="title_activity_fechamento">Fechamento</string>
@@ -28,10 +20,17 @@
     <string name="valor_diaria">Valor Diária</string>
     <string name="digite_valor">Digite Valor</string>
     <string name="hospede">Hóspede:</string>
-    <string name="descricaoo">Descrição</string>
+    <string name="descricaoFoto">Descricao:</string>
     <string name="data_de_entrada">Data de Entrada</string>
     <string name="digite_data_para_fechamento">Digite data para fechamento</string>
     <string name="numero_hospede">Numero hospede</string>
     <string name="digite_data_de_entrada">Digite data de entrada</string>
+    <string name="title_activity_lista_quarto">Quartos</string>
+    <string name="descricao">Descrição:</string>
+    <string name="title_activity_formulario_quarto">Cadastrar Quarto</string>
+    <string name="descricao_do_quarto">Descrição do quarto</string>
+    <string name="add_hospedagem">Cadastrar Hospedagem</string>
+    <string name="quartos">Quartos</string>
+    <string name="title_activity_lista_hospede">ListaHospedeActivity</string>
 
 </resources>

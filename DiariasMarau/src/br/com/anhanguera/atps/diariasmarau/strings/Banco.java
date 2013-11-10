@@ -27,15 +27,15 @@ public class Banco {
 		COLUNAS_QUARTO = cOLUNAS_QUARTO;
 	}
 
-	public static String getTABELA_HOSPEDE() {
+	public String getTABELA_HOSPEDE() {
 		return TABELA_HOSPEDE;
 	}
 
-	public static String getTABELA_HOSPEDAGEM() {
+	public String getTABELA_HOSPEDAGEM() {
 		return TABELA_HOSPEDAGEM;
 	}
 
-	public static String getTABELA_QUARTO() {
+	public String getTABELA_QUARTO() {
 		return TABELA_QUARTO;
 	}
 
@@ -47,15 +47,15 @@ public class Banco {
 		return COLUNAS_HOSPEDAGEM;
 	}
 
-	public static String getCREATE_HOSPEDE() {
+	public String getCREATE_HOSPEDE() {
 		return CREATE_HOSPEDE;
 	}
 
-	public static String getCREATE_HOSPEDAGEM() {
+	public String getCREATE_HOSPEDAGEM() {
 		return CREATE_HOSPEDAGEM;
 	}
 
-	public static String getCREATE_QUARTO() {
+	public String getCREATE_QUARTO() {
 		return CREATE_QUARTO;
 	}
 	

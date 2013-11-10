@@ -10,12 +10,15 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class PousadaDAO extends SQLiteOpenHelper{
 
 	private static final String DATABASE = "marau.db";
-	private static final int VERSAO = 3; //versão da tabela para marcar que foi alterado algum detalhe do modelo
-	private Banco banco;
+	private static final int VERSAO = 4; //versão da tabela para marcar que foi alterado algum detalhe do modelo
+	private Banco banco = new Banco();
+	
+	private static final String TAG = "PousadaDAO";
 
 	
 	public PousadaDAO(Context context){
@@ -43,11 +46,13 @@ public class PousadaDAO extends SQLiteOpenHelper{
 	}
 	
 	public List<Hospedagem> getList(){
-		List<Hospedagem> hospedagems = new ArrayList<Hospedagem>();
-		
+		//TODO Verificar outras tabelas
+		List<Hospedagem> hospedagens = new ArrayList<Hospedagem>();
+		Log.d(TAG, "Teste Banco1");
 		Cursor c = getWritableDatabase().query(banco.getTABELA_HOSPEDAGEM(), banco.getCOLUNAS_HOSPEDAGEM(), null, null, null, null, null);
-		
+		Log.d(TAG, "Teste Banco2");
 		c.moveToFirst();
+		Log.d(TAG, "Teste Banco3");
 		while (c.moveToNext()){
 			Hospedagem hospedagem = new Hospedagem();
 			hospedagem.setId(c.getLong(0));
@@ -56,11 +61,11 @@ public class PousadaDAO extends SQLiteOpenHelper{
 			hospedagem.setDataEntrada(c.getString(3));
 			hospedagem.setDataSaida(c.getString(4));
 						
-			hospedagems.add(hospedagem);
+			hospedagens.add(hospedagem);
 		}
 		
 		c.close();
-		return hospedagems;
+		return hospedagens;
 	}
 	
 	public void insereHospedagem(Hospedagem hospedagem){

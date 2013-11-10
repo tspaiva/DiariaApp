@@ -9,7 +9,7 @@
     tools:context=".FechamentoActivity" >
 
     <ImageView
-        android:contentDescription="@string/descricaoo"
+        android:contentDescription="@string/descricaoFoto"
         android:src="@drawable/foto"
         android:id="@+id/fotoHospede" 
         android:layout_width="83dp"
