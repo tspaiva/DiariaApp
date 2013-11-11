@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-
 public class FormularioHospedeActivity extends Activity {
 	private EditText nomeHospede;
 	private EditText endHospede;
@@ -54,7 +53,7 @@ public class FormularioHospedeActivity extends Activity {
 	
 	private void buscaComponentes(){
 		this.nomeHospede = (EditText) findViewById(R.id.nomeHospede);
-		this.endHospede= (EditText) findViewById(R.id.endHospede);
+		this.endHospede = (EditText) findViewById(R.id.endHospede);
 		this.telHospede = (EditText) findViewById(R.id.telHospede);
 	}
 	

@@ -14,7 +14,7 @@ public class Banco {
 			" nome TEXT NOT NULL, endereco TEXT NOT NULL, telefone TEXT NOT NULL);";
 	
 	private static String CREATE_HOSPEDAGEM = "CREATE TABLE " + TABELA_HOSPEDAGEM + " (id INTEGER PRIMARY KEY," +
-			" id_quarto INTEGER NOT NULL, id_hospede INTEGER NOT NULL, data_entrada TEXT NOT NULL, data_saida TEXT NOT NULL);";
+			" id_quarto INTEGER NOT NULL, id_hospede INTEGER NOT NULL, data_entrada TEXT NOT NULL, data_saida TEXT);";
 	
 	private static String CREATE_QUARTO = "CREATE TABLE " + TABELA_QUARTO + " (id INTEGER PRIMARY KEY," +
 			" descricao TEXT NOT NULL, valor REAL NOT NULL)";

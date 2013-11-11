@@ -4,6 +4,11 @@ public class Quarto {
 	private Long id;
 	private String descricao;
 	private String valor;
+	
+	public String toString(){
+		return id + " - " + descricao;
+	}
+	
 	public Long getId() {
 		return id;
 	}

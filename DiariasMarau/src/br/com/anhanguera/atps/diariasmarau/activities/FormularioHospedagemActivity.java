@@ -39,7 +39,7 @@ public class FormularioHospedagemActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch (item.getItemId()){
-			case R.id.saveHospede:
+			case R.id.saveHospedagem:
 				insereHospedagemComDadosDaTela();
 				
 				PousadaDAO dao = new PousadaDAO(FormularioHospedagemActivity.this);
@@ -67,8 +67,8 @@ public class FormularioHospedagemActivity extends Activity {
 	
 	private void insereHospedagemComDadosDaTela(){		
 		//this.hospedagem.setNumeroQuarto(this.nome.getEditableText().toString());
-		this.hospedagem.setNumeroHospede(this.numHospede.getSelectedView().toString());
-		this.hospedagem.setNumeroQuarto(this.numQuarto.getSelectedView().toString());
+		//this.hospedagem.setNumeroHospede(this.numHospede.getSelectedView().toString());
+		//this.hospedagem.setNumeroQuarto(this.numQuarto.getSelectedView().toString());
 		this.hospedagem.setDataEntrada(this.dataEntrada.getEditableText().toString());
 		//TODO data saida
 		//TODO valor total

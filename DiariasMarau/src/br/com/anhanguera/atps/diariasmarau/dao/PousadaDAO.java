@@ -17,7 +17,7 @@ import android.util.Log;
 public class PousadaDAO extends SQLiteOpenHelper{
 
 	private static final String DATABASE = "marau.db";
-	private static final int VERSAO = 4; //versão da tabela para marcar que foi alterado algum detalhe do modelo
+	private static final int VERSAO = 5; //versão da tabela para marcar que foi alterado algum detalhe do modelo
 	private Banco banco = new Banco();
 	
 	//private static final String TAG = "PousadaDAO";
@@ -83,6 +83,23 @@ public class PousadaDAO extends SQLiteOpenHelper{
 		c.close();
 		return hospedes;
 	}
+	
+	public List<Quarto> getListaQuartos(){
+		List<Quarto> quartos = new ArrayList<Quarto>();
+		
+		Cursor c = getWritableDatabase().query(banco.getTABELA_QUARTO(), banco.getCOLUNAS_QUARTO(), null, null, null, null, null);
+		c.moveToFirst();
+		while (c.moveToNext()){
+			Quarto quarto = new Quarto();
+			quarto.setId(c.getLong(0));
+			quarto.setDescricao(c.getString(1));
+			quarto.setValor(c.getString(2));
+			
+			quartos.add(quarto);
+		}
+		c.close();
+		return quartos;
+	}
 
 	public void insereHospedagem(Hospedagem hospedagem){
 		ContentValues values = new ContentValues();
@@ -90,7 +107,7 @@ public class PousadaDAO extends SQLiteOpenHelper{
 		values.put("id_quarto", hospedagem.getNumeroQuarto());
 		values.put("id_hospede", hospedagem.getNumeroHospede());
 		values.put("data_entrada", hospedagem.getDataEntrada());
-		values.put("data_saida", hospedagem.getDataSaida());
+		//values.put("data_saida", hospedagem.getDataSaida());
 		getWritableDatabase().insert(banco.getTABELA_HOSPEDAGEM(), null, values);
 	}
 	

@@ -6,6 +6,9 @@ public class Hospede {
 	private String endereco;
 	private String telefone;
 	
+	public String toString(){
+		return id + " - " + nome;
+	}
 	
 	public Long getId() {
 		return id;

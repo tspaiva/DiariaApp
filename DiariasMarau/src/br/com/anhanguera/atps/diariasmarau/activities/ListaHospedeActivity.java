@@ -24,7 +24,6 @@ public class ListaHospedeActivity extends Activity {
 		
 		listaHospedes = (ListView) findViewById(R.id.listaHospedes);
 		carregaLista();
-		
 	}
 	
 	@Override

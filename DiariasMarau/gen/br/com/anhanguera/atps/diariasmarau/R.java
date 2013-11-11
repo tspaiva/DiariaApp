@@ -32,7 +32,7 @@ public final class R {
     }
     public static final class id {
         public static final int aberturaData=0x7f080003;
-        public static final int action_settings=0x7f08001a;
+        public static final int action_settings=0x7f08001b;
         public static final int dataEntrada=0x7f08000c;
         public static final int dbAberturaData=0x7f080004;
         public static final int dbFechamentoData=0x7f080006;
@@ -50,20 +50,23 @@ public final class R {
         public static final int labelQuarto=0x7f080009;
         public static final int labelTelefone=0x7f080011;
         public static final int labelValorQuarto=0x7f080015;
-        public static final int listaHospedagens=0x7f080016;
-        public static final int listaHospedes=0x7f080017;
-        public static final int listaQuartos=0x7f080018;
+        public static final int listaHospedagens=0x7f080017;
+        public static final int listaHospedes=0x7f080018;
+        public static final int listaQuartos=0x7f080019;
         public static final int nomeHospede=0x7f08000e;
-        public static final int nova_hospedagem=0x7f080020;
-        public static final int novo_hospede=0x7f08001d;
+        public static final int nova_hospedagem=0x7f080022;
+        public static final int novo_hospede=0x7f08001f;
+        public static final int novo_quarto=0x7f080023;
         public static final int numHospede=0x7f080008;
         public static final int numQuarto=0x7f08000a;
-        public static final int saveHospedagem=0x7f08001b;
-        public static final int saveHospede=0x7f08001c;
-        public static final int splash_image=0x7f080019;
+        public static final int saveHospedagem=0x7f08001c;
+        public static final int saveHospede=0x7f08001d;
+        public static final int saveQuarto=0x7f08001e;
+        public static final int splash_image=0x7f08001a;
         public static final int telHospede=0x7f080012;
-        public static final int tela_hospedes=0x7f08001f;
-        public static final int tela_quartos=0x7f08001e;
+        public static final int tela_hospedes=0x7f080021;
+        public static final int tela_quartos=0x7f080020;
+        public static final int valorQuarto=0x7f080016;
     }
     public static final class layout {
         public static final int activity_fechamento=0x7f030000;
@@ -111,6 +114,7 @@ public final class R {
         public static final int n_pessoas_=0x7f050006;
         public static final int nome=0x7f050020;
         public static final int nome_=0x7f050004;
+        public static final int novo_quarto=0x7f050027;
         public static final int numero_do_quarto=0x7f05000a;
         public static final int numero_hospede=0x7f050012;
         public static final int quartos=0x7f050017;
