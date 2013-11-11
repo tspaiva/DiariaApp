@@ -11,7 +11,7 @@
     <string name="hospedes">Hóspedes</string>
     <string name="salvar">Salvar</string>
     <string name="camera">Foto</string>
-    <string name="numero_do_quarto"> Nº Quarto</string>
+    <string name="numero_do_quarto">Número do Quarto</string>
     <string name="digite_n_quarto">Digite Nº Quarto</string>
     <string name="valor_diaria">Valor Diária</string>
     <string name="digite_valor">Digite Valor</string>
@@ -19,7 +19,7 @@
     <string name="descricaoFoto">Descricao:</string>
     <string name="data_de_entrada">Data de Entrada</string>
     <string name="digite_data_para_fechamento">Digite data para fechamento</string>
-    <string name="numero_hospede">Numero hospede</string>
+    <string name="numero_hospede">Número Hóspede</string>
     <string name="digite_data_de_entrada">Digite data de entrada</string>
     <string name="descricao">Descrição:</string>
     <string name="descricao_do_quarto">Descrição do quarto</string>

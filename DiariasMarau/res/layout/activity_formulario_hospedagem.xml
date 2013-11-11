@@ -17,10 +17,11 @@
 	    android:textSize="15sp"
 	/>
 	
-	<Spinner
+	<EditText
 	    android:id="@+id/numHospede"
 	    android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
+		android:hint="@string/numero_hospede"
 		android:layout_below="@id/labelNumHospede"
 		    
 	/>
@@ -34,10 +35,11 @@
 	    android:layout_below="@id/numHospede"
 	    />
 	
-	<Spinner
+	<EditText
 	    android:id="@+id/numQuarto"
 	    android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
+		android:hint="@string/numero_do_quarto"
 		android:layout_below="@id/labelQuarto"
 	/>
 	
@@ -54,7 +56,7 @@
 	<EditText
 	    android:id="@+id/dataEntrada"
 	    android:hint="@string/digite_data_de_entrada"
-	    android:layout_width="wrap_content"
+	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_below="@id/labelDataEntrada"
 	/>

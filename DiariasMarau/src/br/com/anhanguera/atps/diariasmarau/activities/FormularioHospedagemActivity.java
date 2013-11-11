@@ -14,14 +14,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 
 public class FormularioHospedagemActivity extends Activity {
 	//private EditText nome; 
-	private Spinner numQuarto;
-	private Spinner numHospede;
+	private EditText numQuarto;
+	private EditText numHospede;
 	private EditText dataEntrada;
 	private EditText dataSaida;
 	private String valorTotal;
@@ -47,8 +46,8 @@ public class FormularioHospedagemActivity extends Activity {
 		spinnerArrayAdapterHospede.setDropDownViewResource(android.R.layout.simple_spinner_item);
 		spinnerArrayAdapterQuarto.setDropDownViewResource(android.R.layout.simple_spinner_item);
 		numHospede.setAdapter(spinnerArrayAdapterHospede);
-		numQuarto.setAdapter(spinnerArrayAdapterQuarto);*/
-		
+		numQuarto.setAdapter(spinnerArrayAdapterQuarto);
+*/		
 	}
 	
 	@Override
@@ -80,17 +79,16 @@ public class FormularioHospedagemActivity extends Activity {
 	
 	private void buscaComponentes(){
 		//this.nome = (EditText) findViewById(R.id.nome);
-		this.numHospede = (Spinner) findViewById(R.id.numHospede);
-		this.numQuarto = (Spinner) findViewById(R.id.numQuarto);
+		this.numHospede = (EditText) findViewById(R.id.numHospede);
+		this.numQuarto = (EditText) findViewById(R.id.numQuarto);
 		this.dataEntrada = (EditText) findViewById(R.id.dataEntrada);
 		//TODO componete data saida
 		//TODO componente valor total
 	}
 	
 	private void insereHospedagemComDadosDaTela(){		
-		//this.hospedagem.setNumeroQuarto(this.nome.getEditableText().toString());
-		//this.hospedagem.setNumeroHospede(this.numHospede.getSelectedView().toString());
-		//this.hospedagem.setNumeroQuarto(this.numQuarto.getSelectedView().toString());
+		this.hospedagem.setNumeroHospede(this.numHospede.getEditableText().toString());
+		this.hospedagem.setNumeroQuarto(this.numQuarto.getEditableText().toString());
 		this.hospedagem.setDataEntrada(this.dataEntrada.getEditableText().toString());
 		//TODO data saida
 		//TODO valor total
