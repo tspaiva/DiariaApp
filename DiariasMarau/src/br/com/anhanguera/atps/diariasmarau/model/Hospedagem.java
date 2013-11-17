@@ -9,8 +9,7 @@ public class Hospedagem {
 	private String valorTotal;
 	
 	public String toString(){
-		return id + " - " + numeroHospede;
-		
+		return id + " - " + dataEntrada;
 	}
 
 	public Long getId() {

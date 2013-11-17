@@ -31,8 +31,8 @@
     <string name="title_activity_lista_quarto">Quartos</string>
     <string name="title_activity_fechamento">Fechamento</string>
     <string name="title_activity_main">Hospedagens</string>
-    <string name="title_activity_formulario">Nova Hospedagem</string>
-    <string name="title_activity_formulario_hospede">FormularioHospedeActivity</string>
+    <string name="title_activity_formulario">Cadastrar Hospedagem</string>
+    <string name="title_activity_formulario_hospede">Cadastrar Hospede</string>
     <string name="nome">Nome:</string>
     <string name="digite_o_nome">Digite o nome</string>
     <string name="endereco">Endereço:</string>

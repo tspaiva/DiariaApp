@@ -12,9 +12,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.AdapterView.OnItemSelectedListener;
 
 
 public class FormularioHospedagemActivity extends Activity {
@@ -37,17 +35,6 @@ public class FormularioHospedagemActivity extends Activity {
 		
 		this.buscaComponentes();
 		
-/*		ArrayAdapter<Hospede> arrayAdapterHospede = new ArrayAdapter<Hospede>(this, android.R.layout.simple_spinner_dropdown_item, hospedes);
-		ArrayAdapter<Quarto> arrayAdapterQuarto = new ArrayAdapter<Quarto>(this, android.R.layout.simple_spinner_dropdown_item, quartos);
-		
-		ArrayAdapter<Hospede> spinnerArrayAdapterHospede = arrayAdapterHospede;
-		ArrayAdapter<Quarto> spinnerArrayAdapterQuarto = arrayAdapterQuarto;
-		
-		spinnerArrayAdapterHospede.setDropDownViewResource(android.R.layout.simple_spinner_item);
-		spinnerArrayAdapterQuarto.setDropDownViewResource(android.R.layout.simple_spinner_item);
-		numHospede.setAdapter(spinnerArrayAdapterHospede);
-		numQuarto.setAdapter(spinnerArrayAdapterQuarto);
-*/		
 	}
 	
 	@Override

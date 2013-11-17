@@ -34,6 +34,7 @@
         android:id="@+id/valorQuarto"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:hint="@string/digite_valor"
         android:layout_below="@id/labelValorQuarto"
     />

@@ -12,7 +12,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 public class PousadaDAO extends SQLiteOpenHelper{
 
@@ -50,7 +49,7 @@ public class PousadaDAO extends SQLiteOpenHelper{
 	public List<Hospedagem> getListaHospedagens(){
 		List<Hospedagem> hospedagens = new ArrayList<Hospedagem>();
 		Cursor c = getWritableDatabase().query(banco.getTABELA_HOSPEDAGEM(), banco.getCOLUNAS_HOSPEDAGEM(), null, null, null, null, null);
-		c.moveToFirst();
+		//c.moveToFirst();
 		while (c.moveToNext()){
 			Hospedagem hospedagem = new Hospedagem();
 			hospedagem.setId(c.getLong(0));
@@ -69,7 +68,8 @@ public class PousadaDAO extends SQLiteOpenHelper{
 	public List<Hospede> getListaHospedes(){
 		List<Hospede> hospedes = new ArrayList<Hospede>();
 		Cursor c = getWritableDatabase().query(banco.getTABELA_HOSPEDE(), banco.getCOLUNAS_HOSPEDE(), null, null, null, null, null);
-		c.moveToFirst();
+		
+		//c.moveToFirst();
 		while (c.moveToNext()){
 			Hospede hospede = new Hospede();
 			hospede.setId(c.getLong(0));
@@ -88,7 +88,7 @@ public class PousadaDAO extends SQLiteOpenHelper{
 		List<Quarto> quartos = new ArrayList<Quarto>();
 		
 		Cursor c = getWritableDatabase().query(banco.getTABELA_QUARTO(), banco.getCOLUNAS_QUARTO(), null, null, null, null, null);
-		c.moveToFirst();
+		//c.moveToFirst();
 		while (c.moveToNext()){
 			Quarto quarto = new Quarto();
 			quarto.setId(c.getLong(0));
@@ -128,4 +128,21 @@ public class PousadaDAO extends SQLiteOpenHelper{
 		getWritableDatabase().insert(banco.getTABELA_QUARTO(), null, values);
 		
 	}
+	
+	public void excluirHospedagem(Hospedagem hospedagem){
+		getWritableDatabase().delete(banco.getTABELA_HOSPEDAGEM(), "id=?", 
+				new String[] { hospedagem.getId().toString()});
+	}
+	
+	public void excluirHospede(Hospede hospede){
+		getWritableDatabase().delete(banco.getTABELA_HOSPEDE(), "id=?", 
+				new String[] { hospede.getId().toString()});
+	}
+	
+	public void excluirQuarto(Quarto quarto){
+		getWritableDatabase().delete(banco.getTABELA_QUARTO(), "id=?", 
+				new String[] { quarto.getId().toString()});
+	}
+	
+	
 }

@@ -1,8 +1,6 @@
 package br.com.anhanguera.atps.diariasmarau.activities;
 
 import br.com.anhanguera.atps.diariasmarau.R;
-import br.com.anhanguera.atps.diariasmarau.R.layout;
-import br.com.anhanguera.atps.diariasmarau.R.menu;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
